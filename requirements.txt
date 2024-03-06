@@ -1,0 +1,3 @@
+mkdocs-material~=9.5.12
+mkdocs-caption~=1.0.0
+mkdocs-autorefs~=1.0.1
