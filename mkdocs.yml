@@ -33,7 +33,7 @@ extra:
     - icon: fontawesome/solid/paper-plane
       link: mailto:<leiwuinfo@gmail.com>
     - icon: fontawesome/brands/github
-      link: https://github.com/leiwu84
+      link: https://github.com/leiwu84/python-for-beginner
 
 extra_javascript:
   - javascripts/mathjax.js
