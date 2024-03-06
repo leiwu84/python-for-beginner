@@ -3,7 +3,6 @@ site_name: Python for Beginner
 docs_dir: docs
 theme:
   name: material
-  logo: images/logo.png
   features:
     - navigation.expand
     - navigation.top
