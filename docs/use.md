@@ -41,6 +41,7 @@ IDE: *Integrated Development Environment*
     ```commandline
     python <filename.py>
     ```
+
     !!! note
         `<...>` is a placeholder.
 
