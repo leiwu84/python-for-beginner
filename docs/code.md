@@ -192,25 +192,47 @@ for count in [1, 2, 3, 4]:
 
 
 ### Syntax of definition
-```py
-def func_name(param_1, param_2):
+```py hl_lines="1"
+def func_name(param_1, param_2, param_3=3):
     """
     Docstring explains the purpose, 
     inputs, and returns of this function.
     """
-    return param_1 + param_2
+    return param_1 + param_2 - param_3
 ```
 
+Note the definition of the function can have 2 different kinds of input parameters.
+
+- _Positional parameter_ - A positional parameter does not have a defaul value, like `param_1` and `param_2` in this example.
+- _Keyword parameter_ - A keyword parameter has a defaul value, like `param_3` in this example.
+
+!!! info
+    When defining a function, positional parameters must be defined before keyword parameters. And accordingly, when calling a function, the positional argument 
+
 ### Example of call
-```py
+```py hl_lines="7"
 # Use the function name followed by all the
 #   arguments, enclosed by ().
-# 1 is a positional argument
-# param_2=2 is a keyword argument.   
+# 1 is a positional argument for the positional parameter param_1
+# param_2=2 is a keyword argument for the positional parameter param_2
+# param_3=4 is a keyword argument for the keyword parameter param_2
 # The returned is assigned to variable res.
-res = func_name(1, param_2=2)
+res = func_name(1, param_2=2, param_3=4)
 print(res)
 ```
+
+!!! info "Terminology"
+    - **Input parameter**: An input that is in the _definition_ of a function.
+    - **Argument**: An input that is provided when _calling_ a function.
+
+!!! info
+    It is allowed to provide keyword argument to a positional parameter, like `param_2` in this example. And it is commonly a good practice to always use keyword argument for every input parameter, no matter if it is defined as a positional or keyword parameter, since it is more readable and it doesn't require the order of the arguments to be same as the definition. 
+    
+    Here because `param_2` is provided as a keyword argument, it can be written after `param_3`. But `param_1` is provided as a positional argument, it has to be the first argument. 
+
+    ```py
+    res = func_name(1, param_3=4, param_2=2)  # Allowed.
+    ```
 
 ---
 ## Class
